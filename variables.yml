@@ -1,0 +1,7 @@
+variables:
+ var_serviceconnection: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
+ var_storageaccount_name: ''
+ var_storageaccount_key: ''
+ var_container_name: ''
+ var_blob_name: ""
+ var_
