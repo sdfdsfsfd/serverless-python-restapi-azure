@@ -19,9 +19,9 @@ steps:
     vstsFeedPackage: 'pythonv1.2'
     vstsPackageVersion: 0.0.1
 
-- task: CmdLine@1
+- task: CmdLine@2
   inputs:
-    ls -l
+    script: 'ls -l'
 - task: AzureFunctionApp@1
   displayName: 'Azure Function App Deploy: testfuncappp'
   inputs:
