@@ -12,7 +12,7 @@ variables:
  ##vstsFeed: 'a06735a4-cf5f-4dfc-9e88-22372c251ffd/b6c40c50-0baf-4700-9c24-ea2deecb3512'
  var_vstsFeed: 'mohasinpathan005/moh'
  var_vstsFeedPackage: 'dev'
- var_vstsPackageVersion: '0.0.1'
+ var_vstsPackageVersion: '0.0.4'
  
  ##Func App Variables
  var_appName: 'testfuncapppp'
