@@ -28,4 +28,4 @@ steps:
     azureSubscription: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
     appType: functionAppLinux
     appName: testfuncappp
-    package: '$(System.DefaultWorkingDirectory)/291.zip'
+    package: '$(System.DefaultWorkingDirectory)//*.zip'
