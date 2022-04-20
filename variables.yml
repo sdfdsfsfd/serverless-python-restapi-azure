@@ -3,5 +3,5 @@ variables:
  var_storageaccount_name: ''
  var_storageaccount_key: ''
  var_container_name: ''
- var_blob_name: ""
- var_
+ var_blob_name: "" ##blob name
+ var_file_path: '' ##path to file
