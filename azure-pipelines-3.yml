@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureCLI@2
+  displayName: 'Azure CLI'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: |
+     az storage blob download --account-name rggab05 --account-key 8D59L7zhRAnRvJag+wq32IN6nLdhFIOjed3WyK5rvBqwDMeBTNQpv9tfcFXvblJoodFd/3u/u7Ekhelq/tgxeQ== -c pythonzip -n 296.zip -f 296.zip
+     
+     ls -l
+- task: AzureFunctionApp@1
+  displayName: 'Azure Function App Deploy: testfuncappp'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
+    appType: functionAppLinux
+    appName: testfuncappp
+    package: '$(System.DefaultWorkingDirectory)/296.zip'
