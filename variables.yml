@@ -5,3 +5,8 @@ variables:
  var_container_name: ''
  var_blob_name: "" ##blob name
  var_file_path: '' ##path to file
+ 
+ 
+ var_appType: functionAppLinux
+ var_appName: testfuncappp
+ var_package: '$(System.DefaultWorkingDirectory)/296.zip'
