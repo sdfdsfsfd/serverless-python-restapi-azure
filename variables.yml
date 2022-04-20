@@ -6,7 +6,18 @@ variables:
  var_blob_name: "" ##blob name
  var_file_path: '' ##path to file
  
+ #Azure feed variables
  
+    publishDirectory: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    vstsFeedPublish: 'a06735a4-cf5f-4dfc-9e88-22372c251ffd/b6c40c50-0baf-4700-9c24-ea2deecb3512'
+    vstsFeedPackagePublish: pythonv1.2
+
+
+    vstsFeed: 'a06735a4-cf5f-4dfc-9e88-22372c251ffd/b6c40c50-0baf-4700-9c24-ea2deecb3512'
+    vstsFeedPackage: '8537e821-dc54-4a8c-8f7b-2d6f08e4bbac'
+    vstsPackageVersion: 0.0.1
+ 
+ #Func App Variables
  var_appType: functionAppLinux
  var_appName: testfuncappp
  var_package: '$(System.DefaultWorkingDirectory)/296.zip'
