@@ -15,4 +15,4 @@ variables:
  var_vstsPackageVersion: '0.0.1'
  
  ##Func App Variables
- var_appName: testfuncappp
+ var_appName: 'testfuncapppp'
