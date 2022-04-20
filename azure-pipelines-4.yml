@@ -16,8 +16,8 @@ steps:
   displayName: 'Universal download'
   inputs:
     vstsFeed: 'mohasinpathan005/moh'
-    vstsFeedPackage: 'pythonv1.2'
-    vstsPackageVersion: 0.0.1
+    vstsFeedPackage: 'test'
+    vstsPackageVersion: 1.0.0
 
 - task: CmdLine@2
   inputs:
