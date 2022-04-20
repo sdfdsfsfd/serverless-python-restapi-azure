@@ -15,9 +15,9 @@ steps:
 - task: UniversalPackages@0
   displayName: 'Universal download'
   inputs:
-    vstsFeed: 'mohasinpathan005/moh'
-    vstsFeedPackage: 'test'
-    vstsPackageVersion: 1.0.0
+    vstsFeed: '$(var_vstsFeed)'
+    vstsFeedPackage: '$(var_vstsFeedPackage)'
+    vstsPackageVersion: '$(var_vstsPackageVersion)'
 
 - task: CmdLine@2
   inputs:
@@ -25,7 +25,7 @@ steps:
 - task: AzureFunctionApp@1
   displayName: 'Azure Function App Deploy: testfuncappp'
   inputs:
-    azureSubscription: 'Pay-As-You-Go (40783f5c-2558-41a9-a5af-97b47669376e)'
+    azureSubscription: '$(var_service_connection)'
     appType: functionAppLinux
-    appName: testfuncappp
+    appName: $(var_appname)
     package: '$(System.DefaultWorkingDirectory)//*.zip'
