@@ -15,11 +15,13 @@ steps:
 - task: UniversalPackages@0
   displayName: 'Universal download'
   inputs:
-    vstsFeed: 'mohasinpathan005/mohasinpathan005'
-    vstsFeedPackage: '8537e821-dc54-4a8c-8f7b-2d6f08e4bbac'
+    vstsFeed: 'mohasinpathan005/moh'
+    vstsFeedPackage: 'pythonv1.2'
     vstsPackageVersion: 0.0.1
 
-
+- task: CmdLine@1
+  inputs:
+    ls -l
 - task: AzureFunctionApp@1
   displayName: 'Azure Function App Deploy: testfuncappp'
   inputs:
