@@ -19,9 +19,7 @@ steps:
     vstsFeedPackage: '$(var_vstsFeedPackage)'
     vstsPackageVersion: '$(var_vstsPackageVersion)'
 
-- task: CmdLine@2
-  inputs:
-    script: 'ls -l'
+
 - task: AzureFunctionApp@1
   displayName: 'Azure Function App Deploy: testfuncappp'
   inputs:
